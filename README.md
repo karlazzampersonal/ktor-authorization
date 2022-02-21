@@ -145,7 +145,7 @@ Wrap your route with the authenticate route and then inside that, the withRole r
 ```kotlin
 authenticate("auth-jwt") {
     withRole("user") {
-        get("/role-abc-required") {
+        get("/role-user-required") {
             call.respondText(text = "Ok", status = HttpStatusCode.OK)
         }
     }
